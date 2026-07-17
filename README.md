@@ -39,21 +39,23 @@ This project addresses that gap with an automated luggage cart that follows the 
 
 ### Firmware Installation
 
-1. Clone this repository:
+1. Fork the repository.
+2. Clone this repository:<br>
+(The sample of the HTTPS method is described below)
 ```bash
-   git clone https://github.com/Amulya1007/Autocart-ESP32-BLE-Trolley.git
+   git clone "https://github.com/userName/Autocart-ESP32-BLE-Trolley.git"
    cd Autocart-ESP32-BLE-Trolley/code
 ```
-2. Launch **Arduino IDE 1.8.19** and open the project file (`.ino`).
-3. Install the ESP32 board package (skip if already installed):
+3. Launch **Arduino IDE 1.8.19** and open the project file (`.ino`).
+4. Install the ESP32 board package (skip if already installed):
    - Go to **File → Preferences**, and add this URL under "Additional Board Manager URLs":
      `https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json`
    - Go to **Tools → Board → Board Manager**, search "ESP32", and install it.
-4. Go to **Tools → Board → ESP32 Arduino** and select **NodeMCU-32S** (or your specific ESP32 module).
-5. Update the `TARGET_UUID` string in the code to match your mobile app's broadcasting UUID.
-6. Connect your ESP32 board via USB.
-7. Select the matching serial port under **Tools → Port**.
-8. Click the **Upload** arrow icon to compile and flash the code.
+5. Go to **Tools → Board → ESP32 Arduino** and select **NodeMCU-32S** (or your specific ESP32 module).
+6. Update the `TARGET_UUID` string in the code to match your mobile app's broadcasting UUID.
+7. Connect your ESP32 board via USB.
+8. Select the matching serial port under **Tools → Port**.
+9. Click the **Upload** arrow icon to compile and flash the code.
 > **Note:** No separate library installation is needed for BLE — `BLEDevice.h`, `BLEScan.h`, and `BLEAdvertisedDevice.h` come bundled with the ESP32 board package.
 
 ## Working Principle & Firmware Logic
